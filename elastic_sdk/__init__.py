@@ -11,7 +11,7 @@ from elasticsearch_dsl import Search as DSLSearch
 from elasticsearch_dsl.query import Q
 
 
-__version__ = '0.0.1-dev'
+__version__ = '0.0.1'
 
 
 class Search(DSLSearch):
