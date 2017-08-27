@@ -8,6 +8,11 @@ def client(request):
 
 
 @pytest.fixture(scope='module')
+def client_prefix(request):
+    return elastic_sdk.Client(index_name='test', doc_prefix='prefix')
+
+
+@pytest.fixture(scope='module')
 def index(request, client):
     return client.fixtures.idx(
         id='fixture_id',

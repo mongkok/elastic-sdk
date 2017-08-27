@@ -1,4 +1,3 @@
-# from elasticsearch_dsl.query import Q
 
 
 def test_client_info(client):
@@ -8,10 +7,18 @@ def test_client_info(client):
 def test_search_create_index(client):
     response = client.search().idx(
         id='test.id',
-        body={'test': True},
+        body={},
         doc_type='doc.test')
 
     assert response['_type'] == 'doc.test'
+
+
+def test_search_create_index_with_prefix(client_prefix):
+    response = client_prefix.user.idx(
+        id='test.id',
+        body={})
+
+    assert response['_type'] == 'prefix.user'
 
 
 def test_attr_create_index(client):
