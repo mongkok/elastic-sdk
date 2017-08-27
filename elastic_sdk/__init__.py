@@ -74,8 +74,5 @@ class Client(object):
         doc_type = self._get_doc_type(doc_name)
         return self.es.delete(index=self.index_name, doc_type=doc_type, id=id)
 
-    def sraw(self, body):
-        return self.es.search(index=self.index_name, body=body)
-
     def search(self, **kwargs):
         return Search(using=self.es, index=self.index_name, **kwargs)
