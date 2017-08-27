@@ -29,9 +29,6 @@ class Search(DSLSearch):
         query = Q('multi_match', query=query, fields=fields, **kwargs)
         return self.query(query).highlight(*fields)
 
-    def missing(self, field):
-        return self.filter('missing', field=field)
-
     def exists(self, field):
         return self.filter('exists', field=field)
 
