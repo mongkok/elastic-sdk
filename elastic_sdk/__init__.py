@@ -33,9 +33,11 @@ class Search(DSLSearch):
         return self.filter('exists', field=field)
 
     def idx(self, id, body, **kwargs):
+        if self._doc_type:
+            kwargs.setdefault('doc_type', self._doc_type[0])
+
         return self._using.index(
             index=self._index[0],
-            doc_type=self._doc_type[0],
             id=id,
             body=body,
             **kwargs)
