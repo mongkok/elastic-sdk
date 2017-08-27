@@ -13,5 +13,7 @@ def index(request, client):
         id='fixture_id',
         body={
             'test': True,
+            'title': 'this is the title',
+            'description': 'this is the description',
             'created': None
         })
