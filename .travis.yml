@@ -1,0 +1,23 @@
+language: python
+python:
+  - '2.7'
+  - '3.3'
+  - '3.4'
+  - '3.5'
+  - '3.6'
+
+services:
+  - elasticsearch
+
+install:
+  - pip install tox tox-travis
+
+before_script:
+  - sleep 10
+
+script:
+  - tox
+
+after_success:
+  - pip install codecov
+  - codecov
