@@ -25,8 +25,8 @@ class Search(DSLSearch):
     def q(self, **kwargs):
         return self.query(Q('match', **kwargs))
 
-    def multi_match(self, query, fields, **kwargs):
-        query = Q('multi_match', query=query, fields=fields, **kwargs)
+    def multi_match(self, q, fields, **kwargs):
+        query = Q('multi_match', query=q, fields=fields, **kwargs)
         return self.query(query).highlight(*fields)
 
     def exists(self, field):
