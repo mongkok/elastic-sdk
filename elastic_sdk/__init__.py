@@ -1,5 +1,5 @@
 """
-captions-sdk
+elastic-sdk
 ~~~~~~~~~~~~
 Python SDK for Elasticsearch
 :copyright: (c) 2017 mongkok
