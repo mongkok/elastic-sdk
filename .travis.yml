@@ -11,6 +11,9 @@ services:
 install:
   - pip install tox tox-travis
 
+before_script:
+  - sleep 5
+
 script:
   - curl 127.0.0.1:9200
   - tox
