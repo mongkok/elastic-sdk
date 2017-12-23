@@ -1,5 +1,6 @@
-import elastic_sdk
 import pytest
+
+import elastic_sdk
 
 
 @pytest.fixture(scope='module')
