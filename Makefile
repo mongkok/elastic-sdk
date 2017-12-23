@@ -6,10 +6,11 @@ help:
 	@echo "  isort       Runs isort recursively from your current directory"
 
 test:
-	@pytest tests
+	@pytest tests --flake8
 
 coverage:
 	@pytest\
+		--flake8\
 		--verbose\
 		--cov elastic_sdk\
 		--cov-config .coveragerc\
