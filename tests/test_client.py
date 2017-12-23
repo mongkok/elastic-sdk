@@ -52,7 +52,7 @@ def test_search_multi_match(client):
     fields = ['title', 'description']
     response = client.fixtures.multi_match(
         q='the',
-        fields=fields
+        fields=fields,
     ).hits()
 
     assert set(response.hits[0]['highlight']) == set(fields)

@@ -28,7 +28,7 @@ setup(
     packages=find_packages(exclude=['tests*']),
     install_requires=[
         'elasticsearch>=5.4.0',
-        'elasticsearch-dsl>=5.3.0'
+        'elasticsearch-dsl>=5.3.0',
     ],
     classifiers=[
         'Development Status :: 1 - Planning',
@@ -43,12 +43,12 @@ setup(
     ],
     zip_safe=False,
     setup_requires=[
-        'pytest-runner'
+        'pytest-runner',
     ],
     tests_require=[
         'elasticsearch>=5.4.0',
         'elasticsearch-dsl>=5.3.0',
         'pytest>=3.0.7',
-        'responses>=0.5.1'
-    ]
+        'responses>=0.5.1',
+    ],
 )

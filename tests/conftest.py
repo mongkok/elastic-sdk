@@ -20,5 +20,5 @@ def index(request, client):
             'test': True,
             'title': 'this is the title',
             'description': 'this is the description',
-            'created': None
+            'created': None,
         })
